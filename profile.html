@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Profile - Snippit</title>
+  <link rel="stylesheet" href="/css/variables.css">
+  <link rel="stylesheet" href="/css/index.css">
+  <link rel="icon" type="image/png" href="/assets/snippit-logo.png">
+</head>
+<body>
+  <div class="container">
+
+    <aside class="sidebar">
+      <div class="logo">
+        <img src="/assets/snippit-logo.png" alt="Snippit Logo">
+      </div>
+
+      <div class="welcome" id="welcome-message"></div>
+
+      <nav class="nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">Messages</a></li>
+          <li><a href="#">Following</a></li>
+          <li><a href="profile.html">Profile</a></li>
+          <li><a href="#">More</a></li>
+          <li id="auth-buttons"></li>
+        </ul>
+      </nav>
+    </aside>
+    
+    <main class="post-feed">
+      <h2>My Snippits</h2>
+
+      <button id="new-post-btn" class="button-blue">+ New Post</button>
+
+      <form id="new-post-form" class="hidden">
+        <input type="text" id="post-title" placeholder="Post title" required>
+        <textarea id="post-body" placeholder="What's on your mind?" rows="4"></textarea>
+        <button type="submit" class="button-blue">Publish</button>
+      </form>
+
+      <div id="posts"></div>
+    </main>
+
+  </div>
+
+  <script src="/javascript/profile/sidebar.js"></script>
+  <script type="module" src="/javascript/profile/profile.js"></script>
+</body>
+</html>

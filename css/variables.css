@@ -1,0 +1,11 @@
+:root {
+  /* Colors */
+  --snippit-bg: #141414; 
+  --snippit-text: #e6f7ff; 
+  --snippit-blue: rgb(156, 201, 232);
+  --snippit-card-bg: #111; 
+
+  /* Fonts */
+  --snippit-font: Arial, Helvetica, sans-serif;
+  --snippit-font-size: 18px;
+}

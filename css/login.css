@@ -1,0 +1,99 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--snippit-bg);
+  font-family: var(--snippit-font);
+  color: var(--snippit-blue);
+}
+
+.login-container {
+  background: var(--snippit-card-bg);
+  border: 1px solid var(--snippit-blue);
+  border-radius: 10px;
+  padding: 30px;
+  width: 300px;
+  text-align: center;
+}
+
+.login-container h2 {
+  margin-bottom: 20px;
+  color: var(--snippit-blue);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  text-align: left;
+  font-size: 14px;
+  color: var(--snippit-text);
+}
+
+input {
+  padding: 10px;
+  border: 1px solid var(--snippit-blue);
+  border-radius: 5px;
+  background: var(--snippit-bg);
+  color: var(--snippit-text);
+}
+
+input:focus {
+  outline: none;
+  border-color: #fff;
+}
+
+button {
+  background: var(--snippit-blue);
+  color: var(--snippit-bg);
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: rgba(156, 201, 232, 0.8);
+}
+
+#message {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.register-container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.register-container p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--snippit-text);
+}
+
+.register-container #registerBtn {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  background: var(--snippit-blue);
+  color: var(--snippit-bg);
+  border: none;
+  transition: background 0.2s;
+}
+
+.register-container #registerBtn:hover {
+  background: rgba(156, 201, 232, 0.8);
+}

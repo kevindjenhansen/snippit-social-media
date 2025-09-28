@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Snippit</title>
+
+  <link rel="stylesheet" href="/css/variables.css">
+  <link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+  <div class="login-container">
+    <h2>Login Account</h2>
+    <form id="loginForm">
+      <label for="email">Email (must be @stud.noroff.no)</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required minlength="8">
+
+      <button type="submit">Login</button>
+    </form>
+
+    <div class="register-container">
+      <p>Don't have an account?</p>
+      <button id="registerBtn" class="button-blue">Register</button>
+    </div>
+
+    <div id="message"></div>
+  </div>
+
+  <script src="/javascript/auth/login.js"></script>
+</body>
+</html>
