@@ -1,4 +1,5 @@
 SNIPPIT - Social Media App
+
 A simple post feed application with authentication, search and CRUD functions.
 Users can register, log in, create posts, edit them, delete them, and search for posts.
 
@@ -22,3 +23,4 @@ And if you just wanna try it out the project is launched on github pages at "htt
 📜 License
 
 This project is open-source under the MIT License.
+
