@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "bootstrap": "^5.3.8"
+  },
+  "name": "snippit-social-media",
+  "version": "1.0.0",
+  "description": "SNIPPIT - Social Media App",
+  "main": "index.js",
+  "devDependencies": {
+    "sass": "^1.93.3"
+  },
+  "scripts": {
+    "build": "sass styles/scss:styles/css --style compressed",
+    "watch": "sass styles/scss:styles/css --watch "
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

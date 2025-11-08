@@ -1,0 +1,75 @@
+@use "variables" as snippit;
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: snippit.$snippit-bg;
+  font-family: snippit.$snippit-font;
+  color: snippit.$snippit-blue;
+}
+
+.register-container {
+  background: snippit.$snippit-card-bg;
+  border: 1px solid snippit.$snippit-blue;
+  border-radius: 10px;
+  padding: 30px;
+  width: 300px;
+  text-align: center;
+
+  h2 {
+    margin-bottom: 20px;
+    color: snippit.$snippit-blue;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    label {
+      text-align: left;
+      font-size: 14px;
+      color: snippit.$snippit-text;
+    }
+
+    input {
+      padding: 10px;
+      border: 1px solid snippit.$snippit-blue;
+      border-radius: 5px;
+      background: snippit.$snippit-bg;
+      color: snippit.$snippit-text;
+
+      &:focus {
+        outline: none;
+        border-color: #fff;
+      }
+    }
+
+    button {
+      background: snippit.$snippit-blue;
+      color: snippit.$snippit-bg;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.2s;
+
+      &:hover {
+        background: rgba(snippit.$snippit-blue, 0.8);
+      }
+    }
+  }
+
+  #message {
+    margin-top: 15px;
+    font-size: 14px;
+  }
+}
+
+.form-text {
+  color: rgba(snippit.$snippit-blue, 0.8);
+}
