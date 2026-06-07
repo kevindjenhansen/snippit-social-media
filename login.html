@@ -1,58 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login - Snippit</title>
-    <link href="styles/css/login.css" rel="stylesheet" />
-  </head>
-  <body>
-    <form id="loginForm" class="p-3">
-      <div class="mb-3">
-        <label for="email" class="form-label"
-          >Email (must be @stud.noroff.no)</label
-        >
-        <input
-          type="email"
-          class="form-control"
-          id="email"
-          name="email"
-          required
-          aria-describedby="emailHelp"
-        />
-        <div id="emailHelp" class="form-text">
-          We'll never share your email with anyone else.
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Log in to Snippit to create, edit, delete, and search posts."
+  >
+
+  <title>Login - Snippit</title>
+
+  <link rel="stylesheet" href="./styles/css/variables.css">
+  <link rel="stylesheet" href="./styles/css/index.css">
+  <link rel="icon" type="image/png" href="./assets/snippit-logo.png">
+</head>
+
+<body>
+  <main class="auth-layout">
+    <section class="auth-card" aria-labelledby="login-heading">
+      <a href="./index.html" class="auth-logo" aria-label="Go to Snippit homepage">
+        <img src="./assets/snippit-logo.png" alt="Snippit Logo">
+      </a>
+
+      <div class="auth-header">
+        <p class="feed-label">Welcome back</p>
+        <h1 id="login-heading">Log in</h1>
+        <p>
+          Log in to create posts, manage your snippits, and continue browsing the feed.
+        </p>
+      </div>
+
+      <form id="loginForm" class="auth-form">
+        <div class="form-group">
+          <label for="email">Email</label>
+
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            autocomplete="email"
+            placeholder="yourname@stud.noroff.no"
+          >
         </div>
-      </div>
 
-      <div class="mb-3">
-        <label for="password" class="form-label">Password</label>
-        <input
-          type="password"
-          class="form-control"
-          id="password"
-          name="password"
-          required
-          minlength="8"
-        />
-      </div>
+        <div class="form-group">
+          <label for="password">Password</label>
 
-      <button type="submit" class="btn btn-primary w-100 fw-bold">Login</button>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            required
+            minlength="8"
+            autocomplete="current-password"
+            placeholder="Enter your password"
+          >
+        </div>
 
-      <div class="text-center mt-3">
-        <p class="mb-2">Don't have an account?</p>
-        <button
-          type="button"
-          id="registerBtn"
-          class="btn btn-outline-primary w-100 fw-bold"
-        >
-          Register
+        <button type="submit" class="button-blue auth-submit">
+          Login
         </button>
-      </div>
 
-      <div id="message" class="mt-3 small text-center"></div>
-    </form>
+        <div class="auth-switch">
+          <p>Don't have an account?</p>
 
-    <script src="javascript/auth/login.js"></script>
-  </body>
+          <button
+            type="button"
+            id="registerBtn"
+            class="button-blue button-secondary"
+          >
+            Register
+          </button>
+        </div>
+
+        <div id="message" class="auth-message" aria-live="polite"></div>
+      </form>
+    </section>
+  </main>
+
+  <script src="./javascript/auth/login.js"></script>
+</body>
 </html>

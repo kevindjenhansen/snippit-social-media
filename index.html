@@ -2,57 +2,104 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Snippit is a simple social media feed where users can create, search, edit, and delete short posts."
+  >
+
   <title>Snippit</title>
-  <link rel="stylesheet" href="css/variables.css">
-  <link rel="stylesheet" href="css/index.css">
-  <link rel="icon" type="image/png" href="assets/snippit-logo.png">
+
+  <link rel="stylesheet" href="./styles/css/variables.css">
+  <link rel="stylesheet" href="./styles/css/index.css">
+  <link rel="icon" type="image/png" href="./assets/snippit-logo.png">
 </head>
+
 <body>
   <div class="container">
-
-    <aside class="sidebar">
+    <aside class="sidebar" aria-label="Main navigation">
       <div class="logo">
-        <img src="assets/snippit-logo.png" alt="Snippit Logo">
+        <a href="./index.html" aria-label="Go to Snippit homepage">
+          <img src="./assets/snippit-logo.png" alt="Snippit Logo">
+        </a>
       </div>
 
       <div class="welcome" id="welcome-message"></div>
 
       <nav class="nav">
         <ul>
-          <li><a href="index.html">Home</a></li>
+          <li><a href="./index.html" aria-current="page">Home</a></li>
           <li><a href="#">Messages</a></li>
           <li><a href="#">Following</a></li>
-          <li><a href="profile.html">Profile</a></li>
+          <li><a href="./profile.html">Profile</a></li>
           <li><a href="#">More</a></li>
           <li id="auth-buttons"></li>
         </ul>
       </nav>
     </aside>
-    
+
     <main class="post-feed">
-      <h2>Latest Snippits</h2>
+      <section class="feed-top" aria-labelledby="feed-heading">
+        <div>
+          <p class="feed-label">Social feed</p>
 
-      <div class="search-container">
-        <input type="text" id="search-query" placeholder="Search posts by title...">
-        <button id="search-btn" class="button-blue">Search</button>
-        <button id="clear-search-btn" class="button-blue">Clear</button>
-      </div>
+          <h1 id="feed-heading">Latest Snippits</h1>
 
-      <button id="new-post-btn" class="button-blue">+ New Post</button>
+          <p class="feed-description">
+            Share short posts, search the feed, and manage your own content.
+          </p>
+        </div>
+
+        <button id="new-post-btn" class="button-blue" type="button">
+          + New Post
+        </button>
+      </section>
+
+      <section class="search-container" aria-label="Search posts">
+        <input
+          type="text"
+          id="search-query"
+          placeholder="Search posts by title..."
+          aria-label="Search posts by title"
+        >
+
+        <button id="search-btn" class="button-blue" type="button">
+          Search
+        </button>
+
+        <button id="clear-search-btn" class="button-blue button-secondary" type="button">
+          Clear
+        </button>
+      </section>
 
       <form id="new-post-form" class="hidden">
-        <input type="text" id="post-title" placeholder="Post title" required>
-        <textarea id="post-body" placeholder="What's on your mind?" rows="4"></textarea>
-        <button type="submit" class="button-blue">Publish</button>
+        <input
+          type="text"
+          id="post-title"
+          placeholder="Post title"
+          required
+          aria-label="Post title"
+        >
+
+        <textarea
+          id="post-body"
+          placeholder="What's on your mind?"
+          rows="4"
+          aria-label="Post body"
+        ></textarea>
+
+        <button type="submit" class="button-blue">
+          Publish
+        </button>
       </form>
 
       <div id="posts"></div>
     </main>
-
   </div>
 
-<script src="javascript/profile/sidebar.js"></script>
-<script type="module" src="javascript/posts/posts.js"></script>
+  <script src="./javascript/profile/sidebar.js"></script>
+  <script type="module" src="./javascript/posts/posts.js"></script>
 </body>
 </html>

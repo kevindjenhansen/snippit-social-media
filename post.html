@@ -2,43 +2,66 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Snippit - View Post</title>
-  <link rel="stylesheet" href="styles/css/index.css">
-  <link rel="icon" type="image/png" href="assets/snippit-logo.png">
-</head>
-<body>
-  <div class="container-fluid">
-    <div class="row">
 
-      <aside class="col-md-3 col-lg-2 d-flex flex-column vh-100 p-3 border-end sticky-top">
-        <div class="logo mb-4 text-center">
-          <img src="assets/snippit-logo.png" alt="Snippit Logo" class="img-fluid" style="max-width: 50px;">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="View a single Snippit post."
+  >
+
+  <title>Snippit - View Post</title>
+
+  <link rel="stylesheet" href="./styles/css/variables.css">
+  <link rel="stylesheet" href="./styles/css/index.css">
+  <link rel="icon" type="image/png" href="./assets/snippit-logo.png">
+</head>
+
+<body>
+  <div class="container">
+    <aside class="sidebar" aria-label="Main navigation">
+      <div class="logo">
+        <a href="./index.html" aria-label="Go to Snippit homepage">
+          <img src="./assets/snippit-logo.png" alt="Snippit Logo">
+        </a>
+      </div>
+
+      <div class="welcome" id="welcome-message"></div>
+
+      <nav class="nav">
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="#">Messages</a></li>
+          <li><a href="#">Following</a></li>
+          <li><a href="./profile.html">Profile</a></li>
+          <li><a href="#">More</a></li>
+          <li id="auth-buttons"></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="post-feed">
+      <section class="feed-top" aria-labelledby="post-heading">
+        <div>
+          <p class="feed-label">Single post</p>
+
+          <h1 id="post-heading">Post</h1>
+
+          <p class="feed-description">
+            Read the full snippit, view the author, and manage the post if it belongs to you.
+          </p>
         </div>
 
-        <div id="welcome-message" class="fw-bold text-primary mb-3"></div>
+        <a href="./index.html" class="button-blue button-secondary">
+          Back to feed
+        </a>
+      </section>
 
-        <nav class="nav flex-column">
-          <ul class="nav flex-column list-unstyled">
-            <li class="mb-3"><a href="index.html" class="nav-link">Home</a></li>
-            <li class="mb-3"><a href="#" class="nav-link">Messages</a></li>
-            <li class="mb-3"><a href="#" class="nav-link">Following</a></li>
-            <li class="mb-3"><a href="profile.html" class="nav-link">Profile</a></li>
-            <li class="mb-3"><a href="#" class="nav-link">More</a></li>
-            <li id="auth-buttons"></li>
-          </ul>
-        </nav>
-      </aside>
-
-      <main class="col-md-9 col-lg-10 p-4">
-        <h2 class="text-primary mb-4">Post</h2>
-        <div id="posts" class="d-flex flex-column gap-3"></div>
-      </main>
-
-    </div>
+      <div id="posts"></div>
+    </main>
   </div>
 
-  <script src="javascript/profile/sidebar.js"></script>
-  <script type="module" src="javascript/posts/view.js"></script>
+  <script src="./javascript/profile/sidebar.js"></script>
+  <script type="module" src="./javascript/posts/view.js"></script>
 </body>
 </html>
